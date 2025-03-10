@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="background">
+    <div class="result-container">
+        <h1>Your Meal Plan</h1>
+        <div class="scrollable-container">
+            {% for meal in meals %}
+                <div class="meal">
+                    <h2>{{ meal.title }}</h2>
+                    <img src="{{ meal.image }}" alt="{{ meal.title }}">
+                    <p><a href="{{ meal.sourceUrl }}" target="_blank">View Recipe</a></p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

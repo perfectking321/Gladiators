@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue; /* Full-screen background color */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.form-container, .result-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white box */
+    border-radius: 10px;
+    width: 60%; /* Increase the width of the box */
+    max-width: 700px; /* Limit the maximum width */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+}
+
+.error {
+    color: red;
+}
+
+.scrollable-container {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Optional styling */
+    padding: 10px;
+}
+
+.meal img {
+    width: 100%;
+}
