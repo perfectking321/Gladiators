@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SympNutri AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SympNutri AI</div>
+        <button class="login" id="login-btn">Login</button>
+    </header>
+    <div class="background" id="background-container"></div>
+    <div class="main-box">
+        <div class="symptom-box">
+            <h2>Symptom Checker</h2>
+            <button id="start-btn">Start</button>
+            <div id="input-form" style="display:none;">
+                <form>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter Age">
+                    <br><br>
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" placeholder="Enter Height">
+                    <br><br>
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="Enter Weight">
+                    <br><br>
+                    <label for="blood-group">Blood Group:</label>
+                    <select id="blood-group">
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                    <br><br>
+                    <button id="submit-form">Next</button>
+                </form>
+            </div>
+            <div id="result" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <button class="close-modal" id="close-modal">Close</button>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter Password">
+            <br><br>
+            <button id="login-submit">Login</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
