@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    z-index: 1; /* Ensure header is above other elements */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1; /* Ensure button is clickable */
+}
+
+.background {
+    position: relative;
+    height: 100vh;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Reduced width */
+    height: 50%; /* Reduced height */
+    background-color: rgba(255, 255, 255, 0.5); /* Increased transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+.symptom-box {
+    text-align: center;
+}
+
+#start-btn {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#input-form {
+    margin-top: 20px;
+}
+
+#input-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#input-form input, #input-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+#submit-form {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+#login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    display: none; /* Initially hidden */
+}
+
+#login-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative; /* For close button positioning */
+    z-index: 2; /* Ensure modal is above other elements */
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#login-submit {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1; /* Ensure icon is visible */
+}
+
+.chatbot-icon img {
+    width: 50px;
+    height: 50px;
+}
