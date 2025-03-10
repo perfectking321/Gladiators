@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="top-bar">
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+      </div>
+      <button id="loginButton" class="login-btn">Login</button>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <h1 class="main-heading">Healthcare Assistant</h1>
+    <p class="sub-heading">Your Personalized Health Companion</p>
+  </section>
+
+  <div class="main-area">
+    <div class="scrollable-image-container" id="scrollableBackground"></div>
+
+    <div class="dialog-box">
+      <h2>Select an Option</h2>
+      <button class="dialog-btn" id="symptomChecker">Symptom Checker</button>
+      <button class="dialog-btn" id="dietPlan">Diet Plan</button>
+      <button class="dialog-btn" id="mealPlanner">Meal Planner</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollableBackground = document.getElementById('scrollableBackground');
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY / window.innerHeight;
+            const scaleFactor = Math.min(1 + scrollPosition * 0.2, 1.1);
+            scrollableBackground.style.transform = `scale(${scaleFactor})`;
+        });
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #9ccff9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      background: darkgreen;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-btn {
+      background: transparent;
+      border: 1px solid white;
+      padding: 8px 16px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .login-btn:hover {
+      background: white;
+      color: darkgreen;
+    }
+
+    .hero-section {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .main-area {
+      position: relative;
+      width: 100%;
+      min-height: 150vh;
+    }
+
+    .scrollable-image-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url('healthcare-symbol.png') no-repeat center center/30%;
+      z-index: -1;
+      transition: transform 0.5s ease;
+    }
+
+    .dialog-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      max-width: 90%;
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .dialog-box:hover {
+      transform: translate(-50%, -50%) scale(1.02);
+    }
+
+    .dialog-box h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .dialog-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .dialog-btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</body>
+</html>

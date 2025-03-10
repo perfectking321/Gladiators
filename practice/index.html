@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="top-bar">
+      <div class="profile-picture">
+        <img src="profile.jpg" alt="Profile Picture">
+      </div>
+      <button id="loginButton">Login</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Heading -->
+  <section class="hero-section">
+    <h1 class="main-heading">ossome hax github</h1>
+    <p class="sub-heading">main page w dialogue box</p>
+  </section>
+
+  <!-- Main Area -->
+  <div class="main-area">
+    <!-- Scrollable Healthcare Symbol -->
+    <div class="scrollable-image-container">
+      <img src="healthcare-symbol.png" alt="Healthcare Symbol" id="healthcareSymbol">
+    </div>
+
+    <!-- Fixed Translucent Dialog Box -->
+    <div class="dialog-box">
+      <h2>Enter Your Details</h2>
+      <form id="healthcareForm">
+        <label for="symptoms">Symptoms:</label>
+        <input type="text" id="symptoms" name="symptoms"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+
+        <button type="submit" id="submitForm">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
