@@ -115,7 +115,7 @@ The application uses the Spoonacular API for nutrition and recipe data. To use t
 
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@perfectking321](https://github.com/perfectking321),
+- [@perfectking321](https://github.com/perfectking321),[@r0han02](https://github.com/r0han02),[@Shresth8x](https://github.com/Shresth8x),[@Arihant8408](https://github.com/Arihant8408)
 
 ## 📝 License <a name = "license"></a>
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
