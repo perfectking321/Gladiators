@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthGuide AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">HealthGuide AI</div>
+        <nav>
+            <button class="nav-btn" id="symptoms-nav">Symptoms</button>
+            <button class="nav-btn" id="nutrition-nav">Nutrition</button>
+            <button class="login" id="login-btn">Login</button>
+        </nav>
+    </header>
+    <div class="background" id="background-container"></div>
+
+    <!-- Symptoms Section -->
+    <div class="main-section" id="symptoms-section">
+        <div class="content-box">
+            <h2>Symptom Checker</h2>
+            <div id="symptoms-form">
+                <div class="symptoms-list">
+                    <div class="symptom-entry">
+                        <input type="text" class="symptom-input" placeholder="Enter a symptom">
+                        <button class="add-symptom">+</button>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <input type="number" id="age" placeholder="Age">
+                    <select id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="number" id="duration" placeholder="Duration (days)">
+                </div>
+                <button id="check-symptoms">Check Symptoms</button>
+            </div>
+            <div id="diagnosis-result" class="result-box" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Nutrition Section -->
+    <div class="main-section" id="nutrition-section" style="display:none;">
+        <div class="content-box">
+            <h2>Nutrition Planner</h2>
+            <div id="nutrition-form">
+                <div class="personal-info">
+                    <input type="number" id="height" placeholder="Height (cm)">
+                    <input type="number" id="weight" placeholder="Weight (kg)">
+                    <select id="activity-level">
+                        <option value="">Activity Level</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Lightly Active</option>
+                        <option value="moderate">Moderately Active</option>
+                        <option value="very">Very Active</option>
+                    </select>
+                    <select id="goal">
+                        <option value="">Select Goal</option>
+                        <option value="lose">Lose Weight</option>
+                        <option value="maintain">Maintain Weight</option>
+                        <option value="gain">Gain Weight</option>
+                    </select>
+                </div>
+                <div class="dietary-preferences">
+                    <h3>Dietary Preferences</h3>
+                    <div class="preferences-grid">
+                        <label><input type="checkbox" value="vegetarian"> Vegetarian</label>
+                        <label><input type="checkbox" value="vegan"> Vegan</label>
+                        <label><input type="checkbox" value="gluten-free"> Gluten-Free</label>
+                        <label><input type="checkbox" value="dairy-free"> Dairy-Free</label>
+                    </div>
+                </div>
+                <button id="generate-plan">Generate Nutrition Plan</button>
+            </div>
+            <div id="nutrition-result" class="result-box" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <button class="close-modal" id="close-modal">×</button>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-submit">Login</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
