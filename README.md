@@ -113,8 +113,6 @@ The application uses the Spoonacular API for nutrition and recipe data. To use t
 - [HTML/CSS](https://www.w3.org/standards/webdesign/htmlcss) - Frontend Structure/Styling
 - [Spoonacular API](https://spoonacular.com/food-api) - Nutrition Data
 
-## 🤝 Contributing <a name = "contributing"></a>
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/healthguide-ai/issues).
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@perfectking321](https://github.com/perfectking321),
