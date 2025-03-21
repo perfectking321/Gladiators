@@ -117,7 +117,7 @@ The application uses the Spoonacular API for nutrition and recipe data. To use t
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/healthguide-ai/issues).
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@yourusername](https://github.com/yourusername) - Initial work
+- [@perfectking321](https://github.com/perfectking321),
 
 ## 📝 License <a name = "license"></a>
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
